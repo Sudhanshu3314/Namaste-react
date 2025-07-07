@@ -38,7 +38,7 @@ const ModalMenu = () => {
 				Menu
 			</h1>
 			<Modal
-				title="Basic Modal"
+				title={(params?.restaurantName).replace(/-/g, " ")}
 				open={isModalOpen}
 				onOk={handleOk}
 				footer={[
