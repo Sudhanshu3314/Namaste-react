@@ -17,7 +17,7 @@ const EachFood = (props) => {
 	let ratingSectionStyle ="text-white rounded-lg inline py-[1px] px-[6px] w-[max-content] " + (itemAttribute?.vegClassifier == "VEG" ? "bg-green-500" : "bg-red-500");
 
 	return (
-		<div className="bg-red-50 shadow-lg mx-[10px] my-[18px] px-[20px] py-[18px] rounded-2xl flex justify-between">
+		<div className="bg-red-50 shadow-xl mx-[10px] my-[18px] px-[20px] py-[18px] rounded-2xl flex justify-between">
 			<div className="flex flex-col gap-y-[5px]">
 				<h1 className="font-medium">{name}</h1>
 				<h2 className="font-bold">
