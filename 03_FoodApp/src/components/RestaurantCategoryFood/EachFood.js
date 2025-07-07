@@ -35,13 +35,6 @@ const EachFood = (props) => {
 
 				<p className="text-xs text-gray-800">{description}</p>
 			</div>
-			<div>
-				<img
-					src={CDN_URL + imageId}
-					className="w-[200px] h-[120px] object-cover rounded-lg shadow-xl"
-					alt={name}
-				/>
-			</div>
 		</div>
 	);
 };
