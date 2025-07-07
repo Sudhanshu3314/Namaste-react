@@ -41,6 +41,7 @@ const EachFood = (props) => {
 					className="w-[200px] h-[120px] object-cover rounded-lg shadow-xl"
 					alt={name}
 				/>
+				<h1>Sudhanshu Barnwal</h1>
 			</div>
 		</div>
 	);
