@@ -1,0 +1,114 @@
+/* Hide scrollbar for Chrome, Safari and Edge */
+
+::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Edge */
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.foodStyleBtn {
+	padding: 2px 6px;
+	font-weight: bold;
+	border-radius: 10px;
+	color: white;
+}
+.vegFoodStyle {
+	background-color: green;
+	box-shadow: 0px 0px 3px 0.4px green;
+}
+.nonVegFoodStyle {
+	box-shadow: 0px 0px 3px 0.4px red;
+	background-color: red;
+}
+/* .searchBtn {
+	margin: 0px 20px 0px;
+	padding: 5px 10px;
+	background: linear-gradient(45deg in oklab, blue, red);
+	color: white;
+	outline: none;
+	font-size: 18px;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 0px 2px 0.6px blue, 0px 0px 5px 1.2px red;
+} */
+
+/* shimmer css */
+.shimmer {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cardShimmer {
+	display: flex;
+	gap: 10px 5px;
+	flex-wrap: wrap;
+}
+.resCardShimmer {
+	width: 210px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	padding: 5px;
+	box-sizing: border-box;
+	background: white;
+}
+
+.imgShimmer {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+	border-radius: 10px;
+	background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+	background-position-x: 100%;
+	background-size: 300%;
+	animation: shimmer 1s infinite linear;
+}
+.resCardShimmer .detailShimmer {
+	width: 85%;
+	height: 20px;
+	border-radius: 9px;
+	margin: 10px;
+	background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+	background-position-x: 100%;
+	background-size: 300%;
+	animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+	to {
+		background-position-x: 0%;
+	}
+}
+
+#searchRes {
+	width: 250px;
+	padding: 6px 15px;
+	font-size: 16px;
+	border: 2px solid #ff0000;
+	border-radius: 25px;
+	outline: none;
+	transition: 0.3s ease;
+	box-shadow: 0 0 5px #ff0000;
+}
+#searchRes::placeholder {
+	color: rgb(255, 0, 0);
+	font-weight: bold;
+	font-style: italic;
+}
+#searchRes:focus::placeholder {
+	color: #007bff;
+}
+
+#searchRes:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

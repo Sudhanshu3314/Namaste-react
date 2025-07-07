@@ -1,0 +1,42 @@
+{
+	"name": "namaste_react",
+	"version": "1.0.0",
+	"description": "This is package.json configuration file of npm",
+	"scripts": {
+		"start": "parcel 03_FoodApp/index.htm",
+		"build": "parcel build 03_FoodApp/index.htm",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sudhanshu3314/Namaste-react.git"
+	},
+	"keywords": [
+		"React",
+		"namaste-react"
+	],
+	"author": "Sudhanshu Barnwal",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sudhanshu3314/Namaste-react/issues"
+	},
+	"homepage": "https://github.com/Sudhanshu3314/Namaste-react#readme",
+	"devDependencies": {
+		"parcel": "^2.13.3",
+		"postcss": "^8.5.4",
+		"process": "^0.11.10"
+	},
+	"dependencies": {
+		"@tailwindcss/postcss": "^4.1.11",
+		"antd": "^5.26.3",
+		"lucide-react": "^0.511.0",
+		"prop-types": "^15.8.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-router": "^7.2.0",
+		"tailwindcss": "^4.1.11"
+	},
+	"browserslist": [
+		"last 2 version"
+	]
+}

@@ -1,0 +1,13 @@
+.user-card .card img{
+    width:100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+.user-card .card h3{
+   margin: 5px 0px;
+}
+
+.user-card {
+	margin: 10px 30px;
+}

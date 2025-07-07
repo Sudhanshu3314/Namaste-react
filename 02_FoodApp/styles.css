@@ -1,0 +1,227 @@
+/* Hide scrollbar for Chrome, Safari and Edge */
+
+
+::-webkit-scrollbar {
+	display: none;
+}
+body {
+	overflow: auto;
+	-ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.logo img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid brown;
+	box-shadow: 0px 0px 9px 0 brown;
+	border-radius: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 100px;
+	border: 1px solid brown;
+}
+
+.header .navItems ul {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	gap: 0px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.header .navItems ul .list {
+	background-color: black;
+	color: wheat;
+	text-decoration: none;
+	padding: 2px 10px;
+	border-radius: 10px;
+	cursor: grab;
+	transition: all 0.5s;
+}
+.header .navItems ul .list:hover {
+	background-color: white;
+	color: black;
+	box-shadow: 0px 0px 10px 0 black;
+}
+.noStyle {
+	text-decoration: none;
+	color: inherit;
+}
+.header .navItems ul li button {
+	width: 90px;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: aliceblue;
+	font-weight: bold;
+	padding: 3px 10px;
+	border: 2px solid brown;
+	color: blue;
+}
+.res_container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.resCard {
+	width: 216px;
+	margin: 10px;
+	padding: 5px;
+	box-sizing: border-box;
+	border: 1px solid brown;
+	border-radius: 10px;
+	background-color: aliceblue;
+	transition: all 0.4s;
+}
+.shimmer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.cardShimmer {
+	display: flex;
+	flex-wrap: wrap;
+}
+.resCardShimmer {
+	width: 205px;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 5px;
+	box-sizing: border-box;
+	background: white;
+}
+.resCard:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 7px 0 brown;
+}
+.resCard img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 0 9px brown;
+}
+.imgShimmer {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 10px;
+	background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+	background-position-x: 100%;
+	background-size: 300%;
+	animation: shimmer 1s infinite linear;
+}
+.resCardShimmer .detailShimmer {
+	width: 180px;
+	height: 20px;
+	border-radius: 9px;
+	margin: 10px;
+	background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+	background-position-x: 100%;
+	background-size: 300%;
+	animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+	to {
+		background-position-x: 0%;
+	}
+}
+.resCard h3 {
+	margin: 10px;
+}
+.filter-btn button {
+	width: 220px;
+	background-color: aqua;
+	color: brown;
+	font-weight: bold;
+	font-size: 19px;
+	border-radius: 10px;
+	border: 2px solid green;
+	margin: 15px 0px 5px 20px;
+	cursor: pointer;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	transition: all 0.6s;
+}
+.filter-btn button:active {
+	background-color: brown;
+	color: aqua;
+	box-shadow: 0px 0px 5px 0 black;
+}
+.resCard h3 span {
+	display: inline-block;
+}
+.resCard #nameRes {
+	color: darkred;
+}
+.resCard #nameRes .borderElement {
+	background-color: white;
+}
+.resCard #nameRes .circleElement {
+	padding: 4.3px;
+	margin: 0px 7px;
+	border-radius: 100%;
+}
+
+.resCard #nameRes #borderSpanRed {
+	border: 1px solid red;
+}
+.resCard #nameRes #borderSpanRed #circleSpanRed {
+	background-color: red;
+	padding: 4.3px;
+	margin: 0px 7px;
+	border-radius: 100%;
+}
+.resCard #nameRes #borderSpanGreen {
+	border: 1px solid green;
+}
+.resCard #nameRes #borderSpanGreen #circleSpanGreen {
+	background-color: green;
+	padding: 4.3px;
+	margin: 0px 7px;
+	border-radius: 100%;
+}
+
+.resDetail {
+	height: 165px;
+	padding: 10px 20px;
+	background-image: linear-gradient(white, rgba(0, 0, 0, 0.16));
+	border-radius: 30px;
+	font-size: 1.1em;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	margin: 15px;
+}
+.allInfoRes {
+	height: 112px;
+	border: 0.5px solid rgba(128, 128, 128, 0.341);
+	background-color: white;
+	border-radius: 20px;
+	margin: 10px 5px 10px;
+	font-size: 13px;
+	font-family:Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	padding: 13px;
+}
+.fontSize {
+	margin: 8px 5px;
+	font-size: 13px;
+}
+.color{
+	color: #ff5200;
+}
+

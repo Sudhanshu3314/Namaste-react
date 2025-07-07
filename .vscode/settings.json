@@ -1,3 +1,4 @@
 {
-    "git.path": "C:\\Program Files\\Git\\bin\\git.exe"
+	"git.path": "C:\\Program Files\\Git\\bin\\git.exe",
+	"json.schemaDownload.enable": false
 }
