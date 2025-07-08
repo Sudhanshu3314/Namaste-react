@@ -48,7 +48,7 @@ const RestaurantCard = (props) => {
 				to={"/restaurant/" + slugify(name) + "/" + id + "/"}
 			>
 				<div className="res-img">
-					<img
+					<img		
 						src={CDN_URL + cloudinaryImageId}
 						alt="restaurant_image"
 						className={restaurantImgStyle}

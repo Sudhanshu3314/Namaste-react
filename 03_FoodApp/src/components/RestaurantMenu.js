@@ -4,6 +4,7 @@ import { Star } from "../utils/data";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import EachTypeFoodList from "./RestaurantCategoryFood/EachTypeFoodList";
 import ModalMenu from "./RestaurantCategoryFood/ModalMenu";
+import Loader from "./Shimmer/Loader";
 
 const RestaurantMenu = () => {
 	const params = useParams();
@@ -12,7 +13,7 @@ const RestaurantMenu = () => {
 
 	const resFullMenu = useRestaurantMenu(params?.restaurantId);
 
-	if (!resFullMenu.cards) return <div>Loading........</div>;
+	if (!resFullMenu.cards ) return <div><Loader/></div>;
 
 	console.log(resFullMenu);
 	// Restaurant Name
@@ -44,7 +45,7 @@ const RestaurantMenu = () => {
 	} = resFullMenu?.cards[2]?.card?.card?.info;
 
 	let resDetailStyle =
-		"px-[20px] py-[7px] bg-gradient-to-b from-[rgba(255,200,129,0.49)] via-white to-[rgba(142,255,131,0.49)] rounded-[30px] text-[1.1em] mx-auto";
+		"px-[20px] py-[2px] bg-gradient-to-b from-[rgba(255,200,129,0.49)] via-white to-[rgba(142,255,131,0.49)] rounded-[30px] text-[1.1em] mx-auto";
 
 	let allInfoResStyle =
 		"h-[112px] border-[0.5px] border-[rgba(128,128,128,0.341)] bg-white rounded-[20px] mt-[10px] mx-[5px] mb-[7px] text-[13px] box-border p-[13px]";

@@ -12,7 +12,7 @@ const EachTypeFoodList = (props) => {
 	};
 
 	const eachTypeFoodListStyle =
-		"group my-[20px] shadow-lg rounded-xl w-[40%] m-auto p-[20px] py-[10px] bg-[linear-gradient(to_right,_#b3e5fa,_#e0f7fa)]";
+		"group my-[20px] shadow-lg rounded-xl w-[45%] m-auto px-[20px] py-[5px] bg-[linear-gradient(to_right,_#b3e5fa,_#e0f7fa)] flex flex-col transition-all duration-500 hover:shadow-[0px_0px_5px_1px_brown] hover:bg-[linear-gradient(to_right,_#e0f7fa,_#b3e5fa)]";
 
 	const arrowStyle =
 		"transition-transform duration-400 " +
