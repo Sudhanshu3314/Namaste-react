@@ -19,7 +19,7 @@ const RestaurantMenu = () => {
 	console.log(resFullMenu?.cards[2]?.card?.card?.info);
 
 	const restaurantAllDetails =
-		resFullMenu?.cards[4].groupedCard.cardGroupMap.REGULAR.cards;
+		resFullMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 	console.log(restaurantAllDetails);
 
 	const ItemCategoryOfRes = restaurantAllDetails.filter((eachDetails) => {
@@ -51,7 +51,7 @@ const RestaurantMenu = () => {
 
 	return (
 		<div>
-			<div className={"w-[60%] " + resDetailStyle}>
+			<div className={"w-[40%] " + resDetailStyle}>
 				<h1 className="text-red-800 font-bold text-3xl">{name}</h1>
 				<div className={"allInfoRes" + allInfoResStyle}>
 					<div className="flex items-center gap-x-[5px]">
