@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import useRestaurantList from "../utils/useRestaurantList";
-import RestaurantShimmer from "./Shimmer/restaurantShimmer";
+import RestaurantShimmer from "./Shimmer/RestaurantShimmer";
 
 const Body = () => {
 	const { resList, setResList, dupResList, setDupResList } =
