@@ -14,7 +14,7 @@ const Header = () => {
 		"no-underline bg-black text-white rounded-[30px] px-[15px] py-[5px] shadow-[0px_0px_4px_0.3px_black] transition-all duration-400 hover:cursor-pointer hover:shadow-[0px_0px_10px_1px_black] hover:bg-white hover:text-black";
 
 	const headerStyle =
-		"border-brown px-[100px] py-[10px] flex items-center justify-between sticky top-0 w-full backdrop-blur-xs shadow-xl z-10 bg-blue-200/40 mb-[40px]";
+		"border-brown px-[100px] py-[20px] flex items-center justify-between sticky top-0 w-full backdrop-blur-xs shadow-xl z-10 bg-blue-200/40 mb-[40px]";
 
 	console.log("Header render");
 	return (
@@ -23,7 +23,7 @@ const Header = () => {
 				<img
 					src={LOGO_URL}
 					alt="Logo"
-					className="w-20 h-20 shadow-[0px_0px_10px_1px_brown] rounded-full"
+					className="w-[70px] h-70px] shadow-[0px_0px_10px_1px_brown] rounded-full"
 				/>
 			</div>
 			<div className="navigation">

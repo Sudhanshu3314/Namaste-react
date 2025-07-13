@@ -7,6 +7,7 @@ import Contact from "./src/components/Contact";
 import ErrorPage from "./src/components/ErrorPage";
 import Footer from "./src/components/Footer";
 import RestaurantMenu from "./src/components/RestaurantMenu";
+import Loader from "./src/components/Shimmer/Loader";
 
 // Header
 //   - Logo
@@ -46,7 +47,7 @@ let appRouter = createBrowserRouter([
 			{
 				path: "/about",
 				element: (
-					<Suspense fallback={<h1>Loading.....</h1>}>
+					<Suspense fallback={<Loader className="w-10 h-10 animate-spin" />}>
 						<About />
 					</Suspense>
 				),

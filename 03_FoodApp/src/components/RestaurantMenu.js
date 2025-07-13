@@ -4,22 +4,30 @@ import { Star } from "../utils/data";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import EachTypeFoodList from "./RestaurantCategoryFood/EachTypeFoodList";
 import ModalMenu from "./RestaurantCategoryFood/ModalMenu";
+import Loader from "./Shimmer/Loader";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
 	const params = useParams();
 	console.log(params);
 	console.log(params?.restaurantId + " :" + params?.restaurantName);
+	const [openDropDown, setOpenDropDown] = useState(null);
 
 	const resFullMenu = useRestaurantMenu(params?.restaurantId);
 
-	if (!resFullMenu.cards) return <div>Loading........</div>;
+	if (!resFullMenu.cards)
+		return (
+			<div>
+				<Loader />
+			</div>
+		);
 
 	console.log(resFullMenu);
 	// Restaurant Name
 	console.log(resFullMenu?.cards[2]?.card?.card?.info);
 
 	const restaurantAllDetails =
-		resFullMenu?.cards[4].groupedCard.cardGroupMap.REGULAR.cards;
+		resFullMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 	console.log(restaurantAllDetails);
 
 	const ItemCategoryOfRes = restaurantAllDetails.filter((eachDetails) => {
@@ -44,14 +52,14 @@ const RestaurantMenu = () => {
 	} = resFullMenu?.cards[2]?.card?.card?.info;
 
 	let resDetailStyle =
-		"px-[20px] py-[7px] bg-gradient-to-b from-[rgba(255,200,129,0.49)] via-white to-[rgba(142,255,131,0.49)] rounded-[30px] text-[1.1em] mx-auto";
+		"px-[20px] py-[2px] bg-gradient-to-b from-[rgba(255,200,129,0.49)] via-white to-[rgba(142,255,131,0.49)] rounded-[30px] text-[1.1em] mx-auto";
 
 	let allInfoResStyle =
 		"h-[112px] border-[0.5px] border-[rgba(128,128,128,0.341)] bg-white rounded-[20px] mt-[10px] mx-[5px] mb-[7px] text-[13px] box-border p-[13px]";
 
 	return (
 		<div>
-			<div className={"w-[60%] " + resDetailStyle}>
+			<div className={"w-[40%] " + resDetailStyle}>
 				<h1 className="text-red-800 font-bold text-3xl">{name}</h1>
 				<div className={"allInfoRes" + allInfoResStyle}>
 					<div className="flex items-center gap-x-[5px]">
@@ -85,11 +93,17 @@ const RestaurantMenu = () => {
 			</div>
 
 			<div className="restaurantItemList my-[30px]">
-				{ItemCategoryOfRes.map((eachItemCategory) => {
+				{ItemCategoryOfRes.map((eachItemCategory, indexOfResCategory) => {
 					return (
 						<EachTypeFoodList
 							key={eachItemCategory?.card?.card?.categoryId}
 							eachItemData={eachItemCategory}
+							openDropDown={indexOfResCategory == openDropDown ? true : false}
+							setOpenDropDown={() => {
+								setOpenDropDown(
+									indexOfResCategory == openDropDown ? null : indexOfResCategory
+								);
+							}}
 						/>
 					);
 				})}

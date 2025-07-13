@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import useRestaurantList from "../utils/useRestaurantList";
-import Shimmer from "./Shimmer";
+import RestaurantShimmer from "./Shimmer/RestaurantShimmer";
 
 const Body = () => {
 	const { resList, setResList, dupResList, setDupResList } =
@@ -96,7 +96,7 @@ const Body = () => {
 				No. Of Restaurant : 0
 			</h2>
 			<div className="flex flex-wrap gap-y-[10px] gap-x-[5px]">
-				<Shimmer />
+				<RestaurantShimmer />
 			</div>
 		</div>
 	) : (
